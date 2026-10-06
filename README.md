@@ -9,7 +9,7 @@
 
 ## 🎬 Demo & 📸 Screenshots
 
-![AirDrawer Preview](https://via.placeholder.com/800x400?text=AirDrawer+Preview)
+
 
 *(Project preview and screenshots demonstrating the core user experience)*
 
