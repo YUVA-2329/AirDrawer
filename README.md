@@ -1,60 +1,108 @@
-# 🌌 Neon Air Draw — AI Spatial Interface
+# 🚀 AirDrawer
 
-A high-performance, real-time AI air drawing web application that utilizes advanced hand tracking for a "Minority Report" style spatial interface. 
+> An innovative application that allows users to draw in mid-air using hand tracking and Three.js.
 
-Draw in the air with your dominant hand and manipulate your creations in real-time with your non-dominant hand using intuitive gestures (Move, Scale, Rotate).
+### 🌐 Live Demo
+[🚀 OPEN LIVE DEMO →](https://air-drawer.vercel.app) | [💻 Source Code](https://github.com/YUVA-2329/AirDrawer) 
 
-## ✨ Key Features
+---
 
-*   **✋ Dual-Hand Interaction**: 
-    *   **Right Hand (Dominant)**: Handles high-precision drawing, selective erasing, and canvas clearing.
-    *   **Left Hand (Secondary)**: Dedicated to spatial transformations (Move, Scale, Rotate) of existing strokes.
-*   **📐 Non-Destructive Transforms**: Strokes retain their original coordinate data. All manipulations (TX, TY, Scale, Rotation) are applied at render time via matrix-based math.
-*   **🕶️ Minimalist Glassmorphism UI**: A premium, aesthetic interface with real-time HUD and visual feedback guides.
-*   **⚡ High Performance**: Native WebGL-based rendering engine optimized for 60FPS fluid interactions.
-*   **🌀 Physics-Based Interaction**: Smooth inertia on stroke movement and snap-to-angle (45°) for rotation.
-*   **📖 Gesture Guide**: Built-in interactive manual explaining every movement.
+## 🎬 Demo & 📸 Screenshots
+
+![AirDrawer Preview](https://via.placeholder.com/800x400?text=AirDrawer+Preview)
+
+*(Project preview and screenshots demonstrating the core user experience)*
+
+---
+
+## 🧠 About the Project
+
+This project was built to solve real-world challenges through modern web technologies and advanced engineering. By combining scalable architecture with an intuitive user interface, AirDrawer provides an exceptional user experience while maintaining high performance and security.
+
+### ✨ Key Features
+- 🖐️ Real-time hand tracking using MediaPipe
+- 🖌️ 3D drawing capabilities using Three.js
+- 🎥 Webcam integration
+- 🎨 Custom canvas rendering
+- ⚡ High FPS performance optimization
+
+---
 
 ## 🛠️ Tech Stack
 
-*   **Frontend**: React + Vite
-*   **Hand Tracking**: @mediapipe/hands
-*   **Animations**: Framer Motion
-*   **Icons**: Lucide React (with custom inline SVG fallbacks for brand icons)
-*   **Styling**: Vanilla CSS (Modern Glassmorphism & Neon Aesthetics)
+**Frontend:** React, Three.js, Tailwind CSS
+**Machine Learning:** MediaPipe Hands
 
-## 🎮 Gesture Manual
+---
 
-### ✍️ Drawing Hand (Right Hand)
-| Gesture | Action |
-|---|---|
-| ☝️ **Index Up** | Start drawing a stroke |
-| 🤏 **Pinch** | Selective eraser (intersects with fingertip path) |
-| ✊ **Fist** | Clear the entire canvas |
+## 🏗️ Architecture
 
-### 🖐️ Control Hand (Left Hand)
-| Gesture | Action | Visual Feedback |
-|---|---|---|
-| ✌️ **Two Fingers** | **Move** nearest stroke | Blue crosshair + glow |
-| 🤏 **Pinch & Spread** | **Scale** stroke size | Concentric rings + % label |
-| 🤚 **Open Palm** | **Rotate** stroke | Orange arc + snap points |
+```mermaid
+flowchart LR
+  A[Webcam] --> B[MediaPipe Vision ML]
+  B -->|Hand Landmarks| C[React State]
+  C --> D[Three.js Canvas Renderer]
+```
+
+---
+
+## ⚙️ How It Works
+
+1. The application requests webcam permissions.
+2. MediaPipe tracks the user's index finger in 3D space.
+3. The coordinates are mapped to a Three.js scene.
+4. Lines are rendered continuously as the user moves their hand.
+
+---
 
 ## 🚀 Getting Started
 
-1.  **Install Dependencies**:
-    ```bash
-    npm install
-    ```
-2.  **Run Development Server**:
-    ```bash
-    npm run dev
-    ```
-3.  **Use**: Grant camera permissions and raise your hands in view!
+### Installation
 
-## 👨‍💻 Developer
-**Akshat Singh**  
-📸 Instagram: [@code.akshat.in](https://www.instagram.com/code.akshat.in/)  
-🐙 GitHub: [Axshatt](https://github.com/Axshatt)
+```bash
+git clone https://github.com/YUVA-2329/AirDrawer.git
+cd airdrawer
+npm install
+npm run dev
+```
+
+### Environment Variables
+Create a `.env` file in the root directory:
+```env
+# No environment variables required
+```
 
 ---
-*Built with passion for AI and Spatial Computing.*
+
+## 📁 Project Structure
+
+```text
+project/
+├── src/
+│   ├── components/
+│   ├── utils/
+│   └── App.tsx
+└── package.json
+```
+
+---
+
+## 🛣️ Roadmap
+
+- [x] Hand tracking integration
+- [x] Basic drawing logic
+- [ ] Color selection palette
+- [ ] Save/Export drawings
+
+---
+
+## 📊 Status
+
+🟡 Prototype
+
+---
+
+## 👨‍💻 Author
+
+**Yuva Kishore Peta**  
+GitHub: [YUVA-2329](https://github.com/YUVA-2329)
